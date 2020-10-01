@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="80.596">
+<testcase classname="Login Features" name="Set up Signup" time="28.605">
+<system-out><![CDATA[Given I am able to naviagte onto the Signup page............................passed
+When I click on the Signuplink..............................................passed
+And I Enter the First name  as 'Shruti'.....................................passed
+And I Enter the Last name  as 'a'...........................................passed
+And I enter the  email as 'shradina@in.ibm.com'.............................passed
+And I enter Username as 'admin169'..........................................passed
+And I enter Pass as 'admin@1234'............................................passed
+And I enter Confirm password as 'admin@1234'................................passed
+And I press 'Register'......................................................passed
+Then I should see the message "registered"..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Features" name="Login as Admin" time="51.352">
+<failure message="Unable to locate element: #compose_message_compose&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'&#10;System info: host: 'DESKTOP-ECDQJSE', ip: '9.206.137.239', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200917005511, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 34992, moz:profile: C:\Users\ShrutikaAdina\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: ef9d359a-bcf4-47a4-b225-6353406053a4&#10;*** Element info: {Using=id, value=compose_message_compose}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given I am able to naviagte onto the Signup page............................passed
+When I Enter the username as "Admin169".....................................passed
+And I Enter the password as "admin@1234"....................................passed
+And I click on the login button.............................................passed
+And I Click on the link "Dropdown"..........................................passed
+And I click on the "Inbox"..................................................passed
+And I click on the message "Compose message"................................passed
+And I enter the send to as "naveen1"........................................passed
+And I enter Subject as "testing"............................................passed
+And I enter message as "This is for testing"................................passed
+Then I click on send message button.........................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to locate element: #compose_message_compose
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-ECDQJSE', ip: '9.206.137.239', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200917005511, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 34992, moz:profile: C:\Users\ShrutikaAdina\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ef9d359a-bcf4-47a4-b225-6353406053a4
+*** Element info: {Using=id, value=compose_message_compose}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinition.steps.i_click_on_send_message_button(steps.java:168)
+	at ✽.I click on send message button.(file:///C:/Users/ShrutikaAdina/eclipse-workspace/learning/src/test/resources/Login/login.feature:33)
+]]></failure>
+</testcase>
+</testsuite>
